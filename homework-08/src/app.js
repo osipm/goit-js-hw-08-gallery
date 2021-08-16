@@ -112,6 +112,7 @@ const isImgSwatchEl = e.target.classList.contains('gallery__image');
 };
 
 function onCloseModalClick(e) {
+  imgGallery.src = '';
   window.removeEventListener('keydown', onEscKeyPress);
   openModal.classList.remove('is-open');
 }
@@ -127,8 +128,3 @@ function onCloseModalClickOverlay(event) {
     onCloseModalClick()
   };
 }
-
-//  window.addEventListener('keydown', onKeyPres);
-// function onKeyPres(event) { if (event.code === 'ArrowRigth') {
-//     onGalleryClick(event);
-//   }}
